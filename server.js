@@ -19,7 +19,7 @@ app.post('/signedrequest', function(req, res) {
         context = signedRequest.context,
         oauthToken = signedRequest.client.oauthToken,
         instanceUrl = signedRequest.client.instanceUrl,
-		console.log('oauthToken::'+oauthToken);
+		console.log('oauthToken::'+oauthToken),
 		
 		//console.log('JSONNODE::'+JSON.stringify(context));
 		//console.log('JSONNODE::BODY::'+JSON.stringify(body));
