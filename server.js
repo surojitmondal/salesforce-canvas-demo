@@ -19,7 +19,7 @@ app.post('/signedrequest', function(req, res) {
         context = signedRequest.context,
         oauthToken = signedRequest.client.oauthToken,
         instanceUrl = signedRequest.client.instanceUrl,
-		alert('oauthToken::'+oauthToken),
+		//console('oauthToken::'+oauthToken),
 		
 		//console.log('JSONNODE::'+JSON.stringify(context));
 		//console.log('JSONNODE::BODY::'+JSON.stringify(body));
@@ -41,7 +41,7 @@ app.post('/signedrequest', function(req, res) {
         var imgTag = qr.createImgTag(4);
         res.render('index', {context: context, imgTag: imgTag});
     });
-
+console.log('Express server listening on port ' );
 });
 
 app.set('port', process.env.PORT || 5000);
