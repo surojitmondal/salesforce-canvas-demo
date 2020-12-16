@@ -38,7 +38,7 @@ app.post('/signedrequest', function(req, res) {
             text = 'MECARD:N:' + contact.LastName + ',' + contact.FirstName + ';TEL:' + contact.Phone + ';EMAIL:' + contact.Email + ';;';
         qr.addData(text);
         qr.make();
-        var imgTag = qr.createImgTag(4);
+        var imgTag = qr.createImgTag(4); 
 		console.log('Express server listening on port ' );
         res.render('index', {context: body, imgTag: imgTag});
     });
