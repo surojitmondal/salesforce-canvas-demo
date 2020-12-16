@@ -41,6 +41,7 @@ app.post('/signedrequest', function(req, res) {
         var imgTag = qr.createImgTag(4); 
 		console.log('Express server listening on port ' );
         res.render('index', {context: req, imgTag: imgTag});
+        res.render('index', {context: body, imgTag: imgTag});
     });
 
 });
