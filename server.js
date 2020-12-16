@@ -39,9 +39,10 @@ app.post('/signedrequest', function(req, res) {
         qr.addData(text);
         qr.make();
         var imgTag = qr.createImgTag(4);
+		console.log('Express server listening on port ' );
         res.render('index', {context: context, imgTag: imgTag});
     });
-console.log('Express server listening on port ' );
+
 });
 
 app.set('port', process.env.PORT || 5000);
