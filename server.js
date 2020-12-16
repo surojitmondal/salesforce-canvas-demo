@@ -21,8 +21,8 @@ app.post('/signedrequest', function(req, res) {
         instanceUrl = signedRequest.client.instanceUrl,
 		console.log('oauthToken::'+oauthToken);
 		
-		console.log('JSONNODE::'+JSON.stringify(context));
-		console.log('JSONNODE::BODY::'+JSON.stringify(body));
+		//console.log('JSONNODE::'+JSON.stringify(context));
+		//console.log('JSONNODE::BODY::'+JSON.stringify(body));
         query = "SELECT Id, FirstName, LastName, Phone, Email FROM Contact WHERE Id = '" + context.environment.record.Id + "'",
 
         contactRequest = {
