@@ -13,7 +13,7 @@ app.use(bodyParser()); // pull information from html in POST
 app.use(express.static(__dirname + '/public'));
 
 app.post('/signedrequest', function(req, res) { 
-  
+
     // You could save this information in the user session if needed
     var signedRequest = decode(req.body.signed_request, consumerSecret),
         context = signedRequest.context,
@@ -24,7 +24,7 @@ app.post('/signedrequest', function(req, res) {
 		//console.log('JSONNODE::'+JSON.stringify(context));
 		//console.log('JSONNODE::BODY::'+JSON.stringify(body));
         query = "SELECT Id, FirstName, LastName, Phone, Email FROM Contact WHERE Id = '" + context.environment.record.Id + "'",
-
+ 
         contactRequest = {
             url: instanceUrl + '/services/data/v29.0/query?q=' + query,
             headers: {
