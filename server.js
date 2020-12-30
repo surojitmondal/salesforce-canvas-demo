@@ -13,7 +13,7 @@ app.use(bodyParser()); // pull information from html in POST
 app.use(express.static(__dirname + '/public'));
 
 app.post('/signedrequest', function(req, res) { 
-
+  
     // You could save this information in the user session if needed
     var signedRequest = decode(req.body.signed_request, consumerSecret),
         context = signedRequest.context,
